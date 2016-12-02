@@ -1,0 +1,26 @@
+{
+  "name": "minecraftcommandsdk",
+  "version": "0.0.1",
+  "description": "A minecraft command sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunnerlivio/minecraftcommandsdk.git"
+  },
+  "keywords": [
+    "minecraft",
+    "command",
+    "sdk",
+    "summon",
+    "give"
+  ],
+  "author": "Livio Brunner <contact@brunnerliv.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunnerlivio/minecraftcommandsdk/issues"
+  },
+  "homepage": "https://github.com/brunnerlivio/minecraftcommandsdk#readme"
+}
