@@ -4,7 +4,7 @@
   "description": "A minecraft command sdk",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/karma start"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/brunnerlivio/minecraftcommandsdk/issues"
   },
-  "homepage": "https://github.com/brunnerlivio/minecraftcommandsdk#readme"
+  "homepage": "https://github.com/brunnerlivio/minecraftcommandsdk#readme",
+  "devDependencies": {
+    "@types/expect.js": "^0.3.29",
+    "@types/mocha": "^2.2.33",
+    "expect.js": "^0.3.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.0.2",
+    "karma-typescript": "^2.1.4",
+    "mocha": "^3.2.0",
+    "typescript": "^2.0.10"
+  }
 }
