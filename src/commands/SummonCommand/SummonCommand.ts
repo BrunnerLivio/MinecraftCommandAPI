@@ -1,5 +1,8 @@
-import { ISummonCommand } from './';
-import { IEntity } from '../core';
+import { IEntity, ICommand } from '../../core';
+
+interface ISummonCommand extends ICommand {
+
+}
 
 class SummonCommand implements ISummonCommand {
     private entity: IEntity;
@@ -32,4 +35,4 @@ class SummonCommand implements ISummonCommand {
     }
 }
 
-export { SummonCommand };
+export { SummonCommand, ISummonCommand };

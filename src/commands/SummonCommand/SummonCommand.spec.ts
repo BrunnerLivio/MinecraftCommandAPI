@@ -1,4 +1,4 @@
-import { Zombie } from '../entities';
+import { Zombie } from '../../entities';
 import { SummonCommand, ISummonCommand } from './';
 
 describe('SummonCommand', () => {

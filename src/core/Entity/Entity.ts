@@ -1,4 +1,10 @@
-import { IEntity, IEntityTag, EntityTag } from './';
+import { IEntityTag, EntityTag, ICommand } from '../';
+
+interface IEntity extends ICommand {
+    Name: String;
+    Tag: IEntityTag;
+}
+
 abstract class Entity implements IEntity {
     private name: String;
     private entityTag: IEntityTag;
@@ -29,4 +35,4 @@ abstract class Entity implements IEntity {
     }
 }
 
-export { Entity };
+export { Entity, IEntity };

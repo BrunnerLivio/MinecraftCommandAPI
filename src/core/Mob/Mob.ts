@@ -1,4 +1,8 @@
-import { IMob, Entity, IMobTag, MobTag } from './';
+import { Entity, IMobTag, MobTag, IEntity } from '../';
+
+interface IMob extends IEntity {
+
+}
 
 abstract class Mob extends Entity implements IMob {
     private mobTag: IMobTag;
@@ -23,4 +27,4 @@ abstract class Mob extends Entity implements IMob {
     }
 }
 
-export { Mob };
+export { Mob, IMob };
