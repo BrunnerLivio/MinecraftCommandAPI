@@ -1,3 +1,5 @@
 node_modules
 typings
 coverage
+src/**/*.js
+src/**/*.js.map
