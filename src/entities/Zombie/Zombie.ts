@@ -1,7 +1,11 @@
-import { Mob } from '../../core';
+import { Mob, IMob } from '../../core';
 import { ZombieTag, IZombieTag } from './';
 
-class Zombie extends Mob {
+interface IZombie extends IMob {
+
+}
+
+class Zombie extends Mob implements IZombie {
     private zombieTag: IZombieTag;
 
     /**
@@ -29,4 +33,4 @@ class Zombie extends Mob {
     }
 }
 
-export { Zombie };
+export { Zombie, IZombie };
