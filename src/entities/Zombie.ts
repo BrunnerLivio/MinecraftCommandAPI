@@ -1,11 +1,8 @@
-import { Entity } from '../core';
+import { Mob } from '../core';
 
-class Zombie extends Entity {
+class Zombie extends Mob {
     constructor() {
         super("Zombie");
-    }
-    public get Command(): String {
-        return "";
     }
 }
 

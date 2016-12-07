@@ -9,6 +9,9 @@ class SummonCommand implements ISummonCommand {
 
     public get Command(): String {
         let command = '/summon ' + this.entity.Name;
+        if (this.entity.Command != "") {
+            command += " " + this.entity.Command;
+        }
         return command;
     }
 }
