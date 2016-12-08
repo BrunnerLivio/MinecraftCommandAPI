@@ -1,30 +1,19 @@
-import { Entity, IMobTag, MobTag, IEntity } from '../';
+import { Entity, IMobTag, MobTag, IEntity, IEntityTag } from '../';
 
 interface IMob extends IEntity {
-
 }
 
 abstract class Mob extends Entity implements IMob {
-    private mobTag: IMobTag;
-    constructor(name: string) {
-        super(name);
-        this.mobTag = new MobTag();
+    constructor(name: string, entityTag?: IEntityTag) {
+        super(name, entityTag || new MobTag());
     }
     /**
-     * Tags which modify the mob with your given values.  
+     * Tags which modify the entity with your given values.  
      */
     public get Tag(): IMobTag {
-        return this.mobTag;
+        return this.entityTag as MobTag;
     }
 
-    /**
-     * The command of the mob.
-     * Is a JSON object, but provided as string
-     */
-    public get Command(): String {
-        let command = JSON.stringify(this.mobTag);
-        return command != "{}" ? command : "";
-    }
 }
 
 export { Mob, IMob };

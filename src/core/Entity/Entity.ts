@@ -7,10 +7,10 @@ interface IEntity extends ICommand {
 
 abstract class Entity implements IEntity {
     private name: String;
-    private entityTag: IEntityTag;
-    constructor(name: string) {
+    protected entityTag: IEntityTag;
+    constructor(name: string, entityTag?: IEntityTag) {
         this.name = name;
-        this.entityTag = new EntityTag();
+        this.entityTag = entityTag || new EntityTag();
     }
     /**
      * The name of the entity
@@ -30,7 +30,9 @@ abstract class Entity implements IEntity {
      * Is a JSON object, but provided as string
      */
     public get Command(): String {
-        let command = JSON.stringify(this.entityTag);
+        // Replace e.g. {"CustomName": "MyName"} to {CustomName: "MyName"}
+        let command = JSON.stringify(this.entityTag)
+            .replace(/\"([^(\")"]+)\":/g, "$1:");
         return command != "{}" ? command : "";
     }
 }
