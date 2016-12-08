@@ -31,7 +31,7 @@ abstract class Entity implements IEntity {
      */
     public get Command(): String {
         // Replace e.g. {"CustomName": "MyName"} to {CustomName: "MyName"}
-        let command = JSON.stringify(this.entityTag)
+        let command = JSON.stringify(this.entityTag.Data)
             .replace(/\"([^(\")"]+)\":/g, "$1:");
         return command != "{}" ? command : "";
     }

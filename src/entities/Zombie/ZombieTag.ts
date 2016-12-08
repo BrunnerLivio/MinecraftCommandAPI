@@ -1,13 +1,17 @@
-import { MobTag, IMobTag } from '../../core';
+import { MobTag, IMobTag, MobTagData } from '../../core';
 
 interface IZombieTag extends IMobTag {
-    CanBreakDoors: boolean;
+    CanBreakDoors: Boolean;
 }
 
+class ZombieTagData extends MobTagData implements IZombieTag {
+    public CanBreakDoors: Boolean;
+}
 class ZombieTag extends MobTag implements IZombieTag {
-    private canBreakDoors: boolean;
-    public set CanBreakDoors(value: boolean) {
-        this.canBreakDoors = value;
+    protected data: IZombieTag = new ZombieTagData();
+
+    public set CanBreakDoors(value: Boolean) {
+        this.data.CanBreakDoors = value;
     }
 }
 
