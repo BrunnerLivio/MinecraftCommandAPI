@@ -11,12 +11,17 @@ interface IEntityTag {
      * Makes mobs invulnerable
      */
     Invulnerable: Boolean;
+    /**
+     * If true, the mob's AI will be disabled. The mob will not attempt to move and cannot move, to the extent of not falling when normally able.
+     */
+    NoAI: Boolean;
 }
 
 class EntityTag implements IEntityTag {
     private uuidLeast: String;
     private uuidMost: String;
-    private invulnerable;
+    private invulnerable: Boolean;
+    private noAI: Boolean;
     public set UUIDLeast(value: String) {
         this.uuidLeast = value;
     }
@@ -25,6 +30,9 @@ class EntityTag implements IEntityTag {
     }
     public set Invulnerable(value: Boolean) {
         this.invulnerable = value;
+    }
+    public set NoAI(value: Boolean) {
+        this.noAI = value;
     }
 }
 
