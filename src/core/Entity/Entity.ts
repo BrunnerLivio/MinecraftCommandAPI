@@ -1,7 +1,13 @@
-import { IEntityTag, EntityTag, ICommand } from '../';
+import { IEntityTag, EntityTag, ICommand, IGenerateable } from '../';
 
 interface IEntity extends ICommand {
+    /**
+     * Returns the Name of the entity
+     */
     Name: String;
+    /**
+     * Returns the Tags of the Entity
+     */
     Tag: IEntityTag;
 }
 
