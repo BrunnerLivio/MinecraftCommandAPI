@@ -24,7 +24,7 @@ class SummonCommand implements ISummonCommand {
     }
 
     public get Command(): String {
-        let command = '/summon ' + this.entity.Name
+        let command = '/summon ' + this.entity.Id;
         if (this.x || this.y || this.z) {
             command += ' ' + this.x + ' ' + this.y + ' ' + this.z;
         }

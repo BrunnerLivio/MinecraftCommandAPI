@@ -14,6 +14,11 @@ class MobTag extends EntityTag implements IMobTag {
     public set AttackTime(value: Number) {
         this.data.AttackTime = value;
     }
+
+    public get AttackTime() {
+        return this.data.AttackTime;
+    }
+
     public get Data(): IMobTagData {
         return this.data;
     }

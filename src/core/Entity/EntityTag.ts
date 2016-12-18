@@ -6,7 +6,6 @@ interface IEntityTag extends IGenerateable {
     UUIDMost: String;
     Invulnerable: Boolean;
     NoAI: Boolean;
-    id: String;
     /**
      * 	Sets which entities are riding on the base entity. Similar to Riding, except in 1.9+. Allows multiple entities to ride one base entity.
      */
@@ -23,29 +22,44 @@ class EntityTag implements IEntityTag, IGenerateable {
     public set UUIDLeast(value: String) {
         this.data.UUIDLeast = value;
     }
+
+    public get UUIDLeast(): String {
+        return this.data.UUIDLeast;
+    }
     /**
      * Sets the UUIDMost of the Entity
      */
     public set UUIDMost(value: String) {
         this.data.UUIDMost = value;
     }
+
+    public get UUIDMost(): String {
+        return this.data.UUIDMost;
+    }
+
     public set Invulnerable(value: Boolean) {
         this.data.Invulnerable = value;
     }
+
+    public get Invulnerable(): Boolean {
+        return this.data.Invulnerable;
+    }
+
     public set NoAI(value: Boolean) {
         this.data.NoAI = value;
     }
+
+    public get NoAI() {
+        return this.data.NoAI;
+    }
+
     public AddPassenger(entity: Entity) {
         if (this.data.Passengers == undefined) {
             this.data.Passengers = new Array();
         }
         let data: IEntityTagData = entity.Tag.Data as IEntityTagData;
-        data.id = entity.Name;
+        data.id = entity.Id;
         this.data.Passengers.push(data);
-    }
-
-    public get id(): String {
-        return this.data.id;
     }
 
     public get Data(): IEntityTagData {

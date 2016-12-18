@@ -1,6 +1,6 @@
 {
   "name": "minecraftcommandsdk",
-  "version": "0.0.22",
+  "version": "0.0.3",
   "description": "A minecraft command sdk",
   "main": "src/index.ts",
   "scripts": {

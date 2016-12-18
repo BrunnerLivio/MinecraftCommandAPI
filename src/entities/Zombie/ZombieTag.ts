@@ -13,6 +13,10 @@ class ZombieTag extends MobTag implements IZombieTag {
         this.data.CanBreakDoors = value;
     }
 
+    public get CanBreakDoors(): Boolean {
+        return this.data.CanBreakDoors;
+    }
+
     public get Data(): IZombieTagData {
         return this.data;
     }

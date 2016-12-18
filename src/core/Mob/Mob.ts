@@ -3,9 +3,12 @@ import { Entity, IMobTag, MobTag, IEntity, IEntityTag } from '../';
 interface IMob extends IEntity {
 }
 
-abstract class Mob extends Entity implements IMob {
-    constructor(name: string, entityTag?: IEntityTag) {
-        super(name, entityTag || new MobTag());
+class Mob extends Entity implements IMob {
+    /**
+     * @param {String} id The id of the entity
+     */
+    constructor(id: String, entityTag?: IEntityTag) {
+        super(id, entityTag || new MobTag());
     }
     /**
      * Tags which modify the entity with your given values.  

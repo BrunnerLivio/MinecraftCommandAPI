@@ -2,27 +2,27 @@ import { IEntityTag, EntityTag, ICommand, IGenerateable } from '../';
 
 interface IEntity extends ICommand {
     /**
-     * Returns the Name of the entity
+     * Returns the Id of the entity
      */
-    Name: String;
+    Id: String;
     /**
      * Returns the Tags of the Entity
      */
     Tag: IEntityTag;
 }
 
-abstract class Entity implements IEntity {
-    private name: String;
+class Entity implements IEntity {
+    private id: String;
     protected entityTag: IEntityTag;
-    constructor(name: string, entityTag?: IEntityTag) {
-        this.name = name;
+    constructor(name: String, entityTag?: IEntityTag) {
+        this.id = name;
         this.entityTag = entityTag || new EntityTag();
     }
     /**
      * The name of the entity
      */
-    public get Name(): String {
-        return this.name;
+    public get Id(): String {
+        return this.id;
     }
     /**
      * Tags which modify the entity with your given values.  
