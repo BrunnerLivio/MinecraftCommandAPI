@@ -1,5 +1,10 @@
 import { IEntity, ICommand, Position, PositionType } from '../../core';
 
+/**
+ * @name ISummonCommand
+ * @description
+ * Summons an entity (mobs, projectiles, items, vehicles, etc.).
+ */
 interface ISummonCommand extends ICommand {
 
 }
