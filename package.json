@@ -1,28 +1,28 @@
 {
-  "name": "minecraftcommandsdk",
+  "name": "minecraftcommandapi",
   "version": "0.0.3",
-  "description": "A minecraft command sdk",
+  "description": "An API, which provides functions to generate Minecraft COmmands",
   "main": "src/index.ts",
   "scripts": {
     "test": "node_modules/.bin/karma start"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brunnerlivio/minecraftcommandsdk.git"
+    "url": "git+https://github.com/brunnerlivio/minecraftcommandapi.git"
   },
   "keywords": [
     "minecraft",
     "command",
-    "sdk",
+    "api",
     "summon",
     "give"
   ],
   "author": "Livio Brunner <contact@brunnerliv.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brunnerlivio/minecraftcommandsdk/issues"
+    "url": "https://github.com/brunnerlivio/minecraftcommandapi/issues"
   },
-  "homepage": "https://github.com/brunnerlivio/minecraftcommandsdk#readme",
+  "homepage": "https://github.com/brunnerlivio/minecraftcommandapi#readme",
   "devDependencies": {
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^2.2.33",

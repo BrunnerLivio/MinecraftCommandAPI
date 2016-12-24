@@ -1,5 +1,5 @@
 {
-  "name": "minecraftcommandsdk",
+  "name": "minecraftcommandapi",
   "dependencies": {},
   "globalDependencies": {
     "jasmine": "registry:dt/jasmine#2.5.0+20161025102649"
