@@ -1,10 +1,36 @@
 import { Entity, IEntityTagData, EntityTagData } from './';
 import { IGenerateable } from '../';
 
+/**
+ * @name IEntityTag
+ * @description
+ * The wrapper around EntityTagData, which provides an easier
+ * way to write data to it.
+ */
 interface IEntityTag extends IGenerateable {
+    /**
+     * @name UUIDLeast
+     * @description
+     * The unique identifier of the entity
+     */
     UUIDLeast: String;
+    /**
+     * @name UUIDMost
+     * @description
+     * The unique identifier of the entity
+     */
     UUIDMost: String;
+    /**
+     * @name Invulnerable
+     * @description
+     * Makes entities invulnerable
+     */
     Invulnerable: Boolean;
+    /**
+     * @name NoAI
+     * @description
+     * Makes entity have no AI.
+     */
     NoAI: Boolean;
     /**
      * @name Fire
@@ -21,47 +47,99 @@ interface IEntityTag extends IGenerateable {
     AddPassenger(entity: Entity);
 }
 
-
+/**
+ * @name EntityTag
+ * @description
+ * The wrapper around EntityTagData, which provides an easier
+ * way to write data to it.
+ */
 class EntityTag implements IEntityTag, IGenerateable {
     protected data: IEntityTagData = new EntityTagData();
 
     /**
+     * @name UUIDLeast
+     * @description
      * Sets the UUIDLeast of the Entity
+     * @param {String} value The UUIDLeast which should get set
      */
     public set UUIDLeast(value: String) {
         this.data.UUIDLeast = value;
     }
-
+    /**
+     * @name UUIDLeast
+     * @description
+     * Sets the UUIDLeast of the Entity
+     * @returns {String} The UUIDLeast of the entity
+     */
     public get UUIDLeast(): String {
         return this.data.UUIDLeast;
     }
     /**
+     * @name UUIDMost
+     * @description
      * Sets the UUIDMost of the Entity
+     * @param {String} value The UUIDMost which should get set
      */
     public set UUIDMost(value: String) {
         this.data.UUIDMost = value;
     }
 
+    /**
+     * @name UUIDMost
+     * @description
+     * Returns the UUIDMost of the Entity
+     * @returns {String} The UUIDMost of the entity
+     */
     public get UUIDMost(): String {
         return this.data.UUIDMost;
     }
 
+    /**
+     * @name Invulnerable
+     * @description
+     * Makes entities invulnerable
+     * @param {Boolean} value If the entity is invulnerable or not.
+     */
     public set Invulnerable(value: Boolean) {
         this.data.Invulnerable = value;
     }
 
+    /**
+     * @name Invulnerable
+     * @description
+     * Makes entities invulnerable
+     * @returns {Boolean} If the entity is invulnerable or not.
+     */
     public get Invulnerable(): Boolean {
         return this.data.Invulnerable;
     }
 
+    /**
+     * @name NoAI
+     * @description
+     * Makes entity have no AI.
+     * @param {Boolean} value If the entity has or hasn't AI
+     */
     public set NoAI(value: Boolean) {
         this.data.NoAI = value;
     }
 
-    public get NoAI() {
+    /**
+     * @name NoAI
+     * @description
+     * Makes entity have no AI.
+     * @returns {Boolean} If the entity has or hasn't AI
+     */
+    public get NoAI(): Boolean {
         return this.data.NoAI;
     }
 
+    /**
+     * @name AddPassenger
+     * @description
+     * Adds the given entity as passenger to this entity.
+     * @param {Entity} entity The entity, which should get added as passaenger, on top of this entity.
+     */
     public AddPassenger(entity: Entity) {
         if (this.data.Passengers == undefined) {
             this.data.Passengers = new Array();
@@ -96,6 +174,12 @@ class EntityTag implements IEntityTag, IGenerateable {
         }
     }
 
+    /**
+     * @name Data
+     * @description
+     * The data of the entity, which can be converted to the JSON string, 
+     * which can be processed by Minecraft.
+     */
     public get Data(): IEntityTagData {
         return this.data;
     }
