@@ -1,6 +1,7 @@
 import { SummonCommand, ISummonCommand } from './commands';
 import { IZombie, Zombie } from './entities';
 import { Position, PositionType, IPosition } from './core';
+import { Version } from './core';
 export {
     SummonCommand,
     ISummonCommand,
@@ -8,5 +9,6 @@ export {
     Zombie,
     Position,
     PositionType,
-    IPosition
+    IPosition,
+    Version
 };
