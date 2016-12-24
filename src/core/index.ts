@@ -2,6 +2,7 @@ import { ICommand } from './ICommand';
 import { EntityTag, IEntityTag, IEntity, Entity, EntityTagData, IEntityTagData } from './Entity';
 import { IMobTag, IMob, MobTag, Mob, MobTagData, IMobTagData } from './Mob';
 import { IGenerateable } from './IGenerateable';
+import { Position, PositionType, IPosition } from './Position';
 export {
     ICommand,
     IEntityTag,
@@ -15,5 +16,8 @@ export {
     MobTagData,
     IEntityTagData,
     IMobTagData,
-    IGenerateable
+    IGenerateable,
+    Position,
+    PositionType,
+    IPosition
 };
