@@ -54,4 +54,9 @@ describe('EntityTag', () => {
                 return new RangeError('Value must be between -1 and 32767')
             });
     });
+    it('should set NoGravity', () => {
+        entityTag.NoGravity = true;
+        expect(entityTag.NoGravity).to.be(true);
+        expect(data.NoGravity).to.be(true);
+    });
 });

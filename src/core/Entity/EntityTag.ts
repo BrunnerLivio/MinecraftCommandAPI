@@ -45,6 +45,12 @@ interface IEntityTag extends IGenerateable {
      * @param {Entity} entity The entity, which should get added as a passenger on top of the entity.
      */
     AddPassenger(entity: Entity);
+    /**
+     * @name NoGravity
+     * @description
+     * Makes entity unaffected by gravity.
+     */
+    NoGravity: Boolean;
 }
 
 /**
@@ -174,6 +180,25 @@ class EntityTag implements IEntityTag, IGenerateable {
         }
     }
 
+    /**
+     * @name NoGravity
+     * @description
+     * Makes entity unaffected by gravity.
+     * @param {Boolean} value If the entity should be affacted by gravity or not.
+     */
+    public set NoGravity(value: Boolean) {
+        this.data.NoGravity = value;
+    }
+
+    /**
+     * @name NoGravity
+     * @description
+     * Makes entity unaffected by gravity.
+     * @returns {Boolean} Whether the entity is affected by gravity or not.
+     */
+    public get NoGravity(): Boolean {
+        return this.data.NoGravity;
+    }
     /**
      * @name Data
      * @description

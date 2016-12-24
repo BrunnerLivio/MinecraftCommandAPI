@@ -53,6 +53,12 @@ interface IEntityTagData {
      * Makes mobs silent.
      */
     Silent: Boolean;
+    /**
+     * @name NoGravity
+     * @description
+     * Makes mobs unaffected by gravity.
+     */
+    NoGravity: Boolean;
 }
 
 /**
@@ -105,9 +111,15 @@ class EntityTagData implements IEntityTagData {
     /**
      * @name Silent
      * @description
-     * Makes mobs silent.
+     * Makes entity silent.
      */
     public Silent: Boolean;
+    /**
+     * @name NoGravity
+     * @description
+     * Makes entity unaffected by gravity.
+     */
+    public NoGravity: Boolean;
 }
 
 export { EntityTagData, IEntityTagData };
