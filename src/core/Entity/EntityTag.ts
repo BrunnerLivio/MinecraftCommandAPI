@@ -7,7 +7,16 @@ interface IEntityTag extends IGenerateable {
     Invulnerable: Boolean;
     NoAI: Boolean;
     /**
-     * 	Sets which entities are riding on the base entity. Similar to Riding, except in 1.9+. Allows multiple entities to ride one base entity.
+     * @name Fire
+     * @description
+     * Determines how many ticks a mob is on fire.
+     */
+    Fire: Number;
+    /**
+     * @name AddPassenger
+     * @description
+     * Sets which entities are riding on the base entity. Similar to Riding, except in 1.9+. Allows multiple entities to ride one base entity.
+     * @param {Entity} entity The entity, which should get added as a passenger on top of the entity.
      */
     AddPassenger(entity: Entity);
 }
@@ -60,6 +69,31 @@ class EntityTag implements IEntityTag, IGenerateable {
         let data: IEntityTagData = entity.Tag.Data as IEntityTagData;
         data.id = entity.Id;
         this.data.Passengers.push(data);
+    }
+
+    /**
+     * @name Fire
+     * @description
+     * Determines how many ticks a mob is on fire.
+     * @returns {Number} THe amount of time, in Ticks, the mob is on fire. -1, when not on fire.
+     */
+    public get Fire() {
+        return this.data.Fire;
+    }
+
+    /**
+     * @name Fire
+     * @description
+     * Determines how many ticks a mob is on fire.
+     * @param {Number} value The amount of ticks the mob is on fire. Must be between -1
+     * and 32767. Default -1, when not on fire.
+     */
+    public set Fire(value: Number) {
+        if (value >= -1 && value <= 32767) {
+            this.data.Fire = value;
+        } else {
+            throw new RangeError('Value must be between -1 and 32767');
+        }
     }
 
     public get Data(): IEntityTagData {

@@ -20,7 +20,14 @@ interface IEntityTagData {
      * 	Sets which entities are riding on the base entity. Similar to Riding, except in 1.9+. Allows multiple entities to ride one base entity.
      */
     Passengers: EntityTagData[];
+    /**
+     *  The id of the entity, set by Minecraft
+     */
     id: String;
+    /**
+     * 	Determines how many ticks a mob is on fire.
+     */
+    Fire: Number;
 }
 
 /**
@@ -34,6 +41,10 @@ class EntityTagData implements IEntityTagData {
     public NoAI: Boolean;
     public Passengers: EntityTagData[];
     public id: String;
+    /**
+     * 	Determines how many ticks a mob is on fire.
+     */
+    public Fire: Number;
 }
 
 export { EntityTagData, IEntityTagData };

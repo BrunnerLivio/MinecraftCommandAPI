@@ -38,4 +38,20 @@ describe('EntityTag', () => {
         expect(data.Passengers[0].id).to.be('my_entity');
         expect(data.Passengers.length).to.be(1);
     });
+
+    it('should set Fire', () => {
+        entityTag.Fire = 1;
+        expect(entityTag.Fire).to.be(1);
+        expect(data.Fire).to.be(1);
+    });
+
+    it('should throw an error when Fire value is out of range', () => {
+        expect(() => {
+            entityTag.Fire = -2
+        })
+            .to
+            .throwException(() => {
+                return new RangeError('Value must be between -1 and 32767')
+            });
+    });
 });
