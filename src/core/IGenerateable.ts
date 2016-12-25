@@ -3,7 +3,7 @@
  * @description
  * Interface for Generateable objects
  */
-interface IGenerateable {
+export interface IGenerateable {
     /**
      * @name Data
      * @description
@@ -11,5 +11,3 @@ interface IGenerateable {
      */
     Data: any;
 }
-
-export { IGenerateable };

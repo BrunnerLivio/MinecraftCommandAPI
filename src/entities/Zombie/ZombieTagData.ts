@@ -6,7 +6,7 @@ import { MobTag, IMobTag, MobTagData } from '../../core';
  * This interface represents the real Tags, which get converted to JSON String, when 
  * the command is getting generated.
  */
-interface IZombieTagData extends MobTagData {
+export interface IZombieTagData extends MobTagData {
     /**
      * @name CanBreakDoors
      * @description
@@ -21,7 +21,7 @@ interface IZombieTagData extends MobTagData {
  * This class represents the real Tags, which get converted to JSON String, when 
  * the command is getting generated.
  */
-class ZombieTagData extends MobTagData implements IZombieTagData {
+export class ZombieTagData extends MobTagData implements IZombieTagData {
     /**
      * @name CanBreakDoors
      * @description
@@ -29,5 +29,3 @@ class ZombieTagData extends MobTagData implements IZombieTagData {
      */
     public CanBreakDoors: Boolean;
 }
-
-export { IZombieTagData, ZombieTagData }

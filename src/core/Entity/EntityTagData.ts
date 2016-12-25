@@ -4,7 +4,7 @@
  * This interface represents the real Tags, which get converted to JSON String, when 
  * the command is getting generated.
  */
-interface IEntityTagData {
+export interface IEntityTagData {
     /**
      * @name UUIDLeast
      * @description
@@ -67,7 +67,7 @@ interface IEntityTagData {
  * This class represents the real Tags, which get converted to JSON String, when 
  * the command is getting generated.
  */
-class EntityTagData implements IEntityTagData {
+export class EntityTagData implements IEntityTagData {
     /**
      * @name UUIDLeast
      * @description
@@ -121,5 +121,3 @@ class EntityTagData implements IEntityTagData {
      */
     public NoGravity: Boolean;
 }
-
-export { EntityTagData, IEntityTagData };

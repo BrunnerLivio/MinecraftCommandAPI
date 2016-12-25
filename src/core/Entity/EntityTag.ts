@@ -7,7 +7,7 @@ import { IGenerateable } from '../';
  * The wrapper around EntityTagData, which provides an easier
  * way to write data to it.
  */
-interface IEntityTag extends IGenerateable {
+export interface IEntityTag extends IGenerateable {
     /**
      * @name UUIDLeast
      * @description
@@ -44,7 +44,7 @@ interface IEntityTag extends IGenerateable {
      * Sets which entities are riding on the base entity. Similar to Riding, except in 1.9+. Allows multiple entities to ride one base entity.
      * @param {Entity} entity The entity, which should get added as a passenger on top of the entity.
      */
-    AddPassenger(entity: Entity);
+    AddPassenger(entity: Entity): void;
     /**
      * @name NoGravity
      * @description
@@ -59,7 +59,7 @@ interface IEntityTag extends IGenerateable {
  * The wrapper around EntityTagData, which provides an easier
  * way to write data to it.
  */
-class EntityTag implements IEntityTag, IGenerateable {
+export class EntityTag implements IEntityTag, IGenerateable {
     protected data: IEntityTagData = new EntityTagData();
 
     /**
@@ -146,7 +146,7 @@ class EntityTag implements IEntityTag, IGenerateable {
      * Adds the given entity as passenger to this entity.
      * @param {Entity} entity The entity, which should get added as passaenger, on top of this entity.
      */
-    public AddPassenger(entity: Entity) {
+    public AddPassenger(entity: Entity): void {
         if (this.data.Passengers == undefined) {
             this.data.Passengers = new Array();
         }
@@ -209,5 +209,3 @@ class EntityTag implements IEntityTag, IGenerateable {
         return this.data;
     }
 }
-
-export { EntityTag, IEntityTag, EntityTagData };

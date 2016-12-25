@@ -4,7 +4,7 @@ import { PositionType } from './';
  * @description
  * A position which can be either absolute or relative.
  */
-interface IPosition {
+export interface IPosition {
     /**
      * @name X
      * @description
@@ -36,7 +36,7 @@ interface IPosition {
  * Represents one position, containing X, Y, Z coordinates
  * to identify the current position 
  */
-class Position implements IPosition {
+export class Position implements IPosition {
     /**
      * @param {Number} x The coordinate on the X-Axis
      * @param {Number} y The coordinate on the Y-Axis 
@@ -101,5 +101,3 @@ class Position implements IPosition {
         this.type = value;
     }
 }
-
-export { Position, IPosition };

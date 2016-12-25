@@ -5,7 +5,7 @@ import { IEntity, ICommand, Position, PositionType } from '../../core';
  * @description
  * Summons an entity (mobs, projectiles, items, vehicles, etc.).
  */
-interface ISummonCommand extends ICommand {
+export interface ISummonCommand extends ICommand {
 
 }
 
@@ -14,7 +14,7 @@ interface ISummonCommand extends ICommand {
  * @description
  * Summons an entity (mobs, projectiles, items, vehicles, etc.).
  */
-class SummonCommand implements ISummonCommand {
+export class SummonCommand implements ISummonCommand {
     private entity: IEntity;
     private position: Position | undefined;
     /**
@@ -55,5 +55,3 @@ class SummonCommand implements ISummonCommand {
         return command;
     }
 }
-
-export { SummonCommand, ISummonCommand };

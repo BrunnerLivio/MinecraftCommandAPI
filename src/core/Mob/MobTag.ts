@@ -6,7 +6,7 @@ import { EntityTag, IEntityTag, EntityTagData, MobTagData, IMobTagData } from '.
  * The wrapper around MobTagData, which provides an easier
  * way to write data to it.
  */
-interface IMobTag extends IEntityTag {
+export interface IMobTag extends IEntityTag {
     /**
      * @name AttackTime
      * @description
@@ -22,7 +22,7 @@ interface IMobTag extends IEntityTag {
  * The wrapper around MobTagData, which provides an easier
  * way to write data to it.
  */
-class MobTag extends EntityTag implements IMobTag {
+export class MobTag extends EntityTag implements IMobTag {
     protected data: IMobTagData = new MobTagData();
 
     /**
@@ -55,5 +55,3 @@ class MobTag extends EntityTag implements IMobTag {
         return this.data;
     }
 }
-
-export { MobTag, IMobTag };

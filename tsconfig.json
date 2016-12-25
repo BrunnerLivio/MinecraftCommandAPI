@@ -7,12 +7,16 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "sourceMap": true,
-        "noEmitHelpers": true,
         "strictNullChecks": false,
-        "baseUrl": "./"
+        "baseUrl": "./",
+        "outDir": "lib",
+        "declaration": true
     },
+    "include": [
+        "src/**/*.ts"
+    ],
     "exclude": [
-        "node_modules",
-        "build"
+        "src/**/*.spec.ts",
+        "node_modules"
     ]
 }

@@ -1,3 +1,3 @@
-import { Zombie, IZombie } from './Zombie';
+import { Zombie, IZombie } from "./Zombie";
 
 export { Zombie, IZombie };

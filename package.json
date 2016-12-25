@@ -1,11 +1,16 @@
 {
   "name": "minecraftcommandapi",
-  "version": "0.0.4",
-  "description": "An API, which provides functions to generate Minecraft COmmands",
-  "main": "src/index.ts",
+  "version": "0.0.510",
+  "description": "An API, which provides functions to generate Minecraft Commands",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "clean": "shx rm -rf lib coverage *.log",
+    "build": "tsc && webpack && webpack --minimize",
     "test:dev": "node_modules/.bin/karma start --browsers Chrome",
-    "test": "node_modules/.bin/karma start --browsers PhantomJS --single-run"
+    "test": "node_modules/.bin/karma start --browsers PhantomJS --single-run",
+    "test:coverage": "npm run test && http-server coverage/ -p 2323",
+    "package": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,14 +32,25 @@
   "devDependencies": {
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^2.2.33",
+    "bower": "^1.8.0",
+    "cd": "^0.3.3",
+    "child_process": "^1.0.2",
     "expect.js": "^0.3.1",
+    "fs": "0.0.1-security",
+    "http-server": "^0.9.0",
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-mocha": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-typescript": "^2.1.4",
     "mocha": "^3.2.0",
+    "path": "^0.12.7",
     "phantomjs": "^2.1.7",
-    "typescript": "^2.1.4"
+    "readline-sync": "^1.4.5",
+    "shx": "^0.1.4",
+    "ts-loader": "^1.3.3",
+    "typescript": "^2.1.4",
+    "uglifyjs": "^2.4.10",
+    "webpack": "^1.14.0"
   }
 }

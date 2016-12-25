@@ -3,7 +3,13 @@ import {
     ISummonCommand,
     Achievement,
     IAchievementCommand,
-    AchievementCommand
+    AchievementCommand,
+    AchievementCommandFrom,
+    AchievementCommandTo,
+    IAchievementCommandFrom,
+    IAchievementCommandTo,
+    IAchievementCommandCommand,
+    AchievementCommandCommand
 } from './commands';
 
 import {
@@ -28,6 +34,12 @@ export {
     IPosition,
     Version,
     Achievement,
+    AchievementCommand,
     IAchievementCommand,
-    AchievementCommand
+    AchievementCommandFrom,
+    IAchievementCommandFrom,
+    AchievementCommandCommand,
+    IAchievementCommandCommand,
+    AchievementCommandTo,
+    IAchievementCommandTo
 };

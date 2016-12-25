@@ -7,7 +7,7 @@ import { ZombieTagData, IZombieTagData } from './';
  * The wrapper around ZombieTagData, which provides an easier
  * way to write data to it.
  */
-interface IZombieTag extends IMobTag {
+export interface IZombieTag extends IMobTag {
     /**
      * @name CanBreakDoors
      * @description
@@ -22,7 +22,7 @@ interface IZombieTag extends IMobTag {
  * The wrapper around ZombieTagData, which provides an easier
  * way to write data to it.
  */
-class ZombieTag extends MobTag implements IZombieTag {
+export class ZombieTag extends MobTag implements IZombieTag {
     protected data: IZombieTagData = new ZombieTagData();
 
     /**
@@ -54,5 +54,3 @@ class ZombieTag extends MobTag implements IZombieTag {
         return this.data;
     }
 }
-
-export { ZombieTag, IZombieTag };

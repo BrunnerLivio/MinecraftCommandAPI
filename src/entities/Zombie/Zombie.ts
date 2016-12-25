@@ -6,7 +6,7 @@ import { ZombieTag, IZombieTag } from './';
  * @description
  * Zombies are common, undead hostile mobs that come in many variants.
  */
-interface IZombie extends IMob {
+export interface IZombie extends IMob {
 
 }
 
@@ -15,7 +15,7 @@ interface IZombie extends IMob {
  * @description
  * Zombies are common, undead hostile mobs that come in many variants.
  */
-class Zombie extends Mob implements IZombie {
+export class Zombie extends Mob implements IZombie {
     /**
      * @description
      * Initializes the Zombie
@@ -30,5 +30,3 @@ class Zombie extends Mob implements IZombie {
         return this.entityTag as ZombieTag;
     }
 }
-
-export { Zombie, IZombie };

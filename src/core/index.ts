@@ -1,9 +1,9 @@
-import { ICommand } from './ICommand';
-import { EntityTag, IEntityTag, IEntity, Entity, EntityTagData, IEntityTagData } from './Entity';
-import { IMobTag, IMob, MobTag, Mob, MobTagData, IMobTagData } from './Mob';
-import { IGenerateable } from './IGenerateable';
-import { Position, PositionType, IPosition } from './Position';
-import { Version } from './Version';
+import { ICommand } from "./ICommand";
+import { EntityTag, IEntityTag, IEntity, Entity, EntityTagData, IEntityTagData } from "./Entity";
+import { IMobTag, IMob, MobTag, Mob, MobTagData, IMobTagData } from "./Mob";
+import { IGenerateable } from "./IGenerateable";
+import { Position, PositionType, IPosition } from "./Position";
+import { Version } from "./Version";
 export {
     ICommand,
     IEntityTag,

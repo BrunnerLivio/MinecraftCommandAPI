@@ -5,7 +5,7 @@ import { IEntityTag, EntityTag, ICommand, IGenerateable } from '../';
  * @description
  * Entities encompass all dynamic, moving objects throughout the Minecraft world.
  */
-interface IEntity extends ICommand {
+export interface IEntity extends ICommand {
     /**
      * @name Id
      * @description
@@ -25,7 +25,7 @@ interface IEntity extends ICommand {
  * @description
  * Entities encompass all dynamic, moving objects throughout the Minecraft world.
  */
-class Entity implements IEntity {
+export class Entity implements IEntity {
     private id: String;
     protected entityTag: IEntityTag;
     /**
@@ -66,9 +66,7 @@ class Entity implements IEntity {
     public get Command(): String {
         // Replace e.g. {"CustomName": "MyName"} to {CustomName: "MyName"}
         let command = JSON.stringify(this.entityTag.Data)
-            .replace(/\"([^(\")"]+)\":/g, "$1:");
-        return command != "{}" ? command : "";
+            .replace(/\"([^(\")"]+)\":/g, '$1:');
+        return command != '{}' ? command : '';
     }
 }
-
-export { Entity, IEntity };

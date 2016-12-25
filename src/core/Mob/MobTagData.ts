@@ -6,7 +6,7 @@ import { IEntityTagData, EntityTagData } from '../';
  * This interface represents the real Tags, which get converted to JSON String, when 
  * the command is getting generated.
  */
-interface IMobTagData extends IEntityTagData {
+export interface IMobTagData extends IEntityTagData {
     /**
      * @name AttackTime
      * @description
@@ -21,7 +21,7 @@ interface IMobTagData extends IEntityTagData {
  * This class represents the real Tags, which get converted to JSON String, when 
  * the command is getting generated.
  */
-class MobTagData extends EntityTagData implements IMobTagData {
+export class MobTagData extends EntityTagData implements IMobTagData {
     /**
      * @name AttackTime
      * @description
@@ -29,5 +29,3 @@ class MobTagData extends EntityTagData implements IMobTagData {
      */
     public AttackTime: Number;
 }
-
-export { MobTagData, IMobTagData };

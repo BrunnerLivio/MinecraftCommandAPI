@@ -5,7 +5,7 @@ import { Entity, IMobTag, MobTag, IEntity, IEntityTag } from '../';
  * @description
  * Mobs are living, moving game entities. The term "mob" is short for "mobile".
  */
-interface IMob extends IEntity {
+export interface IMob extends IEntity {
 }
 
 /**
@@ -13,7 +13,7 @@ interface IMob extends IEntity {
  * @description
  * Mobs are living, moving game entities. The term "mob" is short for "mobile".
  */
-class Mob extends Entity implements IMob {
+export class Mob extends Entity implements IMob {
     /**
      * @param {String} id The id of the entity
      */
@@ -30,5 +30,3 @@ class Mob extends Entity implements IMob {
     }
 
 }
-
-export { Mob, IMob };

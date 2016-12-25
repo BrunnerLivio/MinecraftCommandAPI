@@ -3,7 +3,7 @@
  * @description
  * Interface for Minecraft Commands
  */
-interface ICommand {
+export interface ICommand {
     /**
      * @name Command
      * @description
@@ -11,5 +11,3 @@ interface ICommand {
      */
     Command: String;
 }
-
-export { ICommand };

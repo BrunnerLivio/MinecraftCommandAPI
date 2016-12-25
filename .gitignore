@@ -4,3 +4,4 @@ coverage
 src/**/*.js
 src/**/*.js.map
 .vscode
+lib
