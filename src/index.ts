@@ -1,7 +1,23 @@
-import { SummonCommand, ISummonCommand } from './commands';
-import { IZombie, Zombie } from './entities';
-import { Position, PositionType, IPosition } from './core';
-import { Version } from './core';
+import {
+    SummonCommand,
+    ISummonCommand,
+    Achievement,
+    IAchievementCommand,
+    AchievementCommand
+} from './commands';
+
+import {
+    IZombie,
+    Zombie
+} from './entities';
+
+import {
+    Position,
+    PositionType,
+    IPosition,
+    Version
+} from './core';
+
 export {
     SummonCommand,
     ISummonCommand,
@@ -10,5 +26,8 @@ export {
     Position,
     PositionType,
     IPosition,
-    Version
+    Version,
+    Achievement,
+    IAchievementCommand,
+    AchievementCommand
 };

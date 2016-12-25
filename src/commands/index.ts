@@ -1,3 +1,9 @@
 import { SummonCommand, ISummonCommand } from './SummonCommand';
-
-export { SummonCommand, ISummonCommand };
+import { Achievement, IAchievementCommand, AchievementCommand } from './Achievement';
+export {
+    SummonCommand,
+    ISummonCommand,
+    Achievement,
+    IAchievementCommand,
+    AchievementCommand
+};
