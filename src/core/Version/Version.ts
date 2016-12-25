@@ -3,7 +3,7 @@
  * @description
  * The version of this API
  */
-class Version {
+export class Version {
     /**
      * @description
      * Initializes the Version
