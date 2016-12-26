@@ -2,37 +2,43 @@
 
 [![Build Status](https://travis-ci.org/BrunnerLivio/MinecraftCommandAPI.png)](https://travis-ci.org/BrunnerLivio/MinecraftCommandAPI)
 
-Minecraft has a feature to run commands, which are advanced functions, activated 
+Minecraft has a feature to run commands, which are advanced functions, activated
 by typing certain strings of text.
 This API has multiple advantaged, in comparison with the current state
 of Minecraft Command generation.
+
 - Automation of command generation
 - Intellisense feature
 - Descriptive Comments
 - Value validation
-- Extendable 
+- Extendable
 
 ![Preview](https://raw.githubusercontent.com/BrunnerLivio/MinecraftCommandAPI/master/.github/assets/preview.png)
 
 ## Installation
 
 Via NPM
+
 ```
 npm install --save minecraftcommandapi
 ```
 
 Via Bower
+
 ```
 bower install --save minecraftcommandapi
 ```
 
 ## Contribute
+
 See [CONTRIBUTING.md](https://github.com/BrunnerLivio/MinecraftCommandAPI/blob/master/.github/CONTRIBUTING.md)
 
 ## Changelog
+
 See [CHANGELOG.md](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md)
 
 ## Progress
+
 - achievement: 90%
 - ban: 0%
 - ban-ip: 0%
