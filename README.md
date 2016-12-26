@@ -12,7 +12,7 @@ of Minecraft Command generation.
 - Value validation
 - Extendable 
 
-![Preview](https://raw.githubusercontent.com/BrunnerLivio/MinecraftCommandAPI/branch/.github/assets/preview.png)
+![Preview](https://raw.githubusercontent.com/BrunnerLivio/MinecraftCommandAPI/master/.github/assets/preview.png)
 
 ## Installation
 
