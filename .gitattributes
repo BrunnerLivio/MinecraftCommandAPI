@@ -1,0 +1,11 @@
+* text=auto
+
+*.ts text
+*.js text
+*.md text
+*.json text
+*.yml text
+
+.npmignore text
+
+*.png binary
