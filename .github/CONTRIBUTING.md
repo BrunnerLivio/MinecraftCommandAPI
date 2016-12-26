@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you so much for contributing to MinecraftCommandAPI. 
+Thank you so much for contributing to MinecraftCommandAPI.
 Every help is appreciated!
 
 ## Creating an Issue
@@ -18,25 +18,27 @@ Looking for an issue to fix? Make sure to look through our issues with the [help
 ## Setup
 
 1. Fork the repo.
-1. Clone your fork.
-1. Make a branch for your change.
-1. Run npm install (make sure you have node and npm installed first)
-1. Modifying Components
+2. Clone your fork.
+3. Make a branch for your change.
+4. Run npm install (make sure you have node and npm installed first)
+5. Modifying Components
 
 ### Typescript Changes
 
 #### Style Guide
+
 We use the same styleguide as Typescript. [Read More](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines).
 
 #### Test
-You must write for every file a test. To create a test, create a file called [NAME-OF-THE-FILE-TO-TEST].spec.ts in the same
-directory. 
+
+You must write for every file a test. To create a test, create a file called `[NAME-OF-THE-FILE-TO-TEST].spec.ts` in the same
+directory.
 
 To run a test, type `npm run test:dev`, if you have chrome installed.
 If you don't have chrome installed, rune `npm test`.
 
 Every file must achieve at least a coverage of 80%. You can check the
-coverage using `npm run test:coverage`. 
+coverage using `npm run test:coverage`.
 
 #### Adding Documentation
 
@@ -45,21 +47,22 @@ In order to keep the code maintainable, you must write comments for every class,
 /**
  * @name Entity
  * @description
- * Entities encompass all dynamic, moving objects 
+ * Entities encompass all dynamic, moving objects
  * throughout the Minecraft world.
- */`
-``` 
-where @name is the Class name, @description is the description.
+ */
+```
+where `@name` is the class name, `@description` is the description.
 
 ## Commits
+
 The subject contains succinct description of the change:
 
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- do not capitalize first letter
-- do not place a period . at the end
-- entire length of the commit message must not go over 50 characters
-- describe what the commit does, not what issue it relates to or fixes
-- be brief, yet descriptive - we should have a good understanding of what the commit does by reading the subject
+- Use the imperative, present tense: "change" not "changed" nor "changes"
+- Do not capitalize first letter
+- Do not place a period . at the end
+- Entire length of the commit message must not go over 50 characters
+- Describe what the commit does, not what issue it relates to or fixes
+- Be brief, yet descriptive - we should have a good understanding of what the commit does by reading the subject
 
 ## License
 
