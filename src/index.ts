@@ -14,7 +14,9 @@ import {
 
 import {
     IZombie,
-    Zombie
+    Zombie,
+    FallingBlock,
+    IFallingBlock
 } from './entities';
 
 import {
@@ -41,5 +43,7 @@ export {
     AchievementCommandCommand,
     IAchievementCommandCommand,
     AchievementCommandTo,
-    IAchievementCommandTo
+    IAchievementCommandTo,
+    FallingBlock,
+    IFallingBlock
 };
