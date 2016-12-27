@@ -1,2 +1,1 @@
-import Version from './Version';
-export { Version };
+export * from './Version';

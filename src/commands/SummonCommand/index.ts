@@ -1,3 +1,1 @@
-import { SummonCommand, ISummonCommand } from './SummonCommand';
-
-export { SummonCommand, ISummonCommand };
+export * from './SummonCommand';

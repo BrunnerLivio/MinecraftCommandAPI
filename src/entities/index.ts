@@ -1,4 +1,2 @@
-import { Zombie, IZombie } from "./Zombie";
-
-export { Zombie, IZombie };
+export * from "./Zombie";
 export * from './FallingBlock';
