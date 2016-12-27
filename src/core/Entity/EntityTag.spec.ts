@@ -35,7 +35,7 @@ describe('EntityTag', () => {
     it('should add a passenger', () => {
         let entity = new Entity('my_entity');
         entityTag.AddPassenger(entity);
-        expect(data.Passengers[0].id).to.be('my_entity');
+        expect(data.Passengers[0].id).to.be('minecraft:my_entity');
         expect(data.Passengers.length).to.be(1);
     });
 

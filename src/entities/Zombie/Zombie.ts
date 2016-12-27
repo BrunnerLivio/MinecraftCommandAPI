@@ -21,7 +21,7 @@ export class Zombie extends Mob implements IZombie {
      * Initializes the Zombie
      */
     constructor() {
-        super('Zombie', new ZombieTag());
+        super('zombie', new ZombieTag());
     }
     /**
      * Tags which modify the entity with your given values.  

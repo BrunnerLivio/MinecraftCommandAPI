@@ -23,6 +23,6 @@ describe('Zombie', () => {
         zombie1.Tag.UUIDMost = '25';
         let zombie2 = new Zombie();
         zombie2.Tag.AddPassenger(zombie1);
-        expect(zombie2.Command).to.be('{Passengers:[{AttackTime:5,UUIDMost:"25",id:"Zombie"}]}');
+        expect(zombie2.Command).to.be('{Passengers:[{AttackTime:5,UUIDMost:"25",id:"minecraft:zombie"}]}');
     });
 });

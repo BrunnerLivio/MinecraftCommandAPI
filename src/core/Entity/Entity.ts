@@ -45,7 +45,7 @@ export class Entity implements IEntity {
      * @returns {String} The id of the entity, set by Minecraft
      */
     public get Id(): String {
-        return this.id;
+        return 'minecraft:' + this.id;
     }
     /**
      * @name Tag
