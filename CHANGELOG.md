@@ -1,6 +1,7 @@
 # 1.0.0-Alpha.2
 
 - Add Fallingblock Entity (90%)
+- Add Elder Guardian Entity
 
 - Change Item-Ids to have a prefix called 'minecraft:'. 'Zombie' -> 'minecraft:zombie'
 
