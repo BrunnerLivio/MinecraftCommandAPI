@@ -1,4 +1,4 @@
-import { AchievementCommand, Achievement, IAchievementCommand } from './';
+import { AchievementCommand, Achievement } from './';
 
 describe('AchievementCommand', () => {
     it('should generate a simple achievement command', () => {

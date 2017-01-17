@@ -147,7 +147,7 @@ export class EntityTag implements IEntityTag, IGenerateable {
      * @param {Entity} entity The entity, which should get added as passaenger, on top of this entity.
      */
     public AddPassenger(entity: Entity): void {
-        if (this.data.Passengers == undefined) {
+        if (this.data.Passengers === undefined) {
             this.data.Passengers = new Array();
         }
         let data: IEntityTagData = entity.Tag.Data as IEntityTagData;

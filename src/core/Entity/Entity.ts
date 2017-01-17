@@ -67,6 +67,6 @@ export class Entity implements IEntity {
         // Replace e.g. {"CustomName": "MyName"} to {CustomName: "MyName"}
         let command = JSON.stringify(this.entityTag.Data)
             .replace(/\"([^(\")"]+)\":/g, '$1:');
-        return command != '{}' ? command : '';
+        return command !== '{}' ? command : '';
     }
 }

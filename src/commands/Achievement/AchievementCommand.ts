@@ -1,4 +1,3 @@
-import { ICommand } from '../../core';
 import { Achievement, IAchievementCommandTo, IAchievementCommandFrom, AchievementCommandTo, AchievementCommandFrom } from './';
 
 /**

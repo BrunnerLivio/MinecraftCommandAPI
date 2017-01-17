@@ -1,4 +1,4 @@
-import { EntityTag, IEntityTag, EntityTagData, MobTagData, IMobTagData } from '../';
+import { EntityTag, IEntityTag, MobTagData, IMobTagData } from '../';
 
 /**
  * @name IMobTag

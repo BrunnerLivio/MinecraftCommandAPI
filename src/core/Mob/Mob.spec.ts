@@ -1,4 +1,4 @@
-import { Mob, EntityTag, IEntityTag } from '../';
+import { Mob, EntityTag } from '../';
 
 class MockCustomTag extends EntityTag {
     public get AttackTime() {

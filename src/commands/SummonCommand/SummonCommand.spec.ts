@@ -1,6 +1,6 @@
 import { Zombie } from '../../entities';
 import { SummonCommand, ISummonCommand } from './';
-import { Position, IPosition, PositionType } from '../../core';
+import { Position, PositionType } from '../../core';
 
 describe('SummonCommand', () => {
 

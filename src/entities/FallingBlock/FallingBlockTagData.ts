@@ -1,4 +1,4 @@
-import { EntityTag, IEntityTagData, EntityTagData } from '../../core';
+import { IEntityTagData, EntityTagData } from '../../core';
 
 /**
  * @name IFallingBlockTagData

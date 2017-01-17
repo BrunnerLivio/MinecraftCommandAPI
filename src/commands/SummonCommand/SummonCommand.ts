@@ -36,8 +36,8 @@ export class SummonCommand implements ISummonCommand {
      */
     public get Command(): String {
         let command: String = '/summon ' + this.entity.Id;
-        if (this.position != undefined) {
-            if (this.position.Type == PositionType.Absolute) {
+        if (this.position !== undefined) {
+            if (this.position.Type === PositionType.Absolute) {
                 command += ' ' + this.position.X +
                     ' ' + this.position.Y +
                     ' ' + this.position.Z;
@@ -49,7 +49,7 @@ export class SummonCommand implements ISummonCommand {
         } else {
             command += ' ~ ~ ~';
         }
-        if (this.entity.Command != '') {
+        if (this.entity.Command !== '') {
             command += ' ' + this.entity.Command;
         }
         return command;

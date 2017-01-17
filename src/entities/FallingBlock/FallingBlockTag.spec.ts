@@ -1,4 +1,4 @@
-import { FallingBlockTag, IFallingBlockTag, IFallingBlockTagData, FallingBlockTagData } from './';
+import { FallingBlockTag, IFallingBlockTagData } from './';
 
 describe('FallingBlockTag', () => {
     let tag: FallingBlockTag;
@@ -23,14 +23,14 @@ describe('FallingBlockTag', () => {
 
     it('should throw an exception when Time is not valid', () => {
         expect(() => {
-            tag.Time = -2
+            tag.Time = -2;
         })
             .to
             .throwException(() => {
                 return new RangeError('Time must be between -1 and 127')
             });
         expect(() => {
-            tag.Time = 128
+            tag.Time = 128;
         })
             .to
             .throwException(() => {

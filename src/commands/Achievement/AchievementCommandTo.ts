@@ -27,7 +27,6 @@ export interface IAchievementCommandTo {
  * Is used when calling 'Give' on IAchievementCommand
  */
 export class AchievementCommandTo implements IAchievementCommandTo {
-    private isGiven: Boolean;
     private achievement: Achievement;
     /**
      * @description

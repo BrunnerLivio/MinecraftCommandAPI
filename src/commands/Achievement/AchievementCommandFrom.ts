@@ -16,7 +16,7 @@ export interface IAchievementCommandFrom {
      * @param {String} player Adds the given name to the command. Can also be @a or @p
      * @returns {ICommand} The final command, which can be generated.
      */
-    From(player: String): ICommand
+    From(player: String): ICommand;
 }
 
 /**

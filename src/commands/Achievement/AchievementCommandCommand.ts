@@ -53,7 +53,7 @@ export class AchievementCommandCommand implements IAchievementCommandCommand {
         } else {
             command += 'take ';
         }
-        if (this.achievement == Achievement.all) {
+        if (this.achievement === Achievement.all) {
             command += '* ';
         } else {
             command += 'achievement.' + this.GetAchievementName(this.achievement) + ' ';

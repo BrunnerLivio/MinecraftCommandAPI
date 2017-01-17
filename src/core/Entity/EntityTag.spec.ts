@@ -47,7 +47,7 @@ describe('EntityTag', () => {
 
     it('should throw an error when Fire value is out of range', () => {
         expect(() => {
-            entityTag.Fire = -2
+            entityTag.Fire = -2;
         })
             .to
             .throwException(() => {
